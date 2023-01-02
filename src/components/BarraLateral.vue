@@ -32,8 +32,8 @@
         },
         methods:{
           alterarTema(){
-            this.modoEscuroAtivo = !this.modoEscuroAtivo
-            this.$emit('aoTemaAlterado',this.modoEscuroAtivo)
+            this.modoEscuroAtivo = !this.modoEscuroAtivo /* muda pra true */
+            this.$emit('aoTemaAlterado',this.modoEscuroAtivo) /* emite o evento */
           }
         }
     });
