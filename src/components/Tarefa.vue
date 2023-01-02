@@ -4,8 +4,8 @@
             <div class="column is-7" >
                 {{ tarefa.descricao || 'Tarefa sem descrição' }}
             </div>
-            <div class="column">
-                <Cronometro :tempoEmSegundos="tarefa.duracaoEmSegundos"/>
+            <div class="column" >
+                <Cronometro :tempoEmSegundos="tarefa.duracaoEmSegundos" :displayOn="false" :escuroOn="true"/>
             </div>
         </div>
     </Box>
@@ -39,7 +39,6 @@ import Box from '@/components/Box.vue'
 </script>
 
 <style scoped>
-
 
 
 </style>

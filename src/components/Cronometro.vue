@@ -1,6 +1,6 @@
 <template>
     <section>
-        <strong class="display">
+        <strong :class="{ 'display': displayOn, 'escuro': escuroOn }">
             {{ tempoDecorrido }}
         </strong>
     </section>
@@ -17,7 +17,15 @@ export default defineComponent({
         tempoEmSegundos: {
             type: Number,
             default: 0
-        }
+        },
+        displayOn:{
+            type: Boolean,
+            default: true
+        },
+        escuroOn: {
+            type: Boolean,
+            default: false
+        },
     },
     computed: {
       tempoDecorrido (): string {
@@ -31,6 +39,9 @@ export default defineComponent({
 <style scoped>
 .display{
     color: var(--texto-primario);
+}
+.escuro{
+    color: #333333;
 }
 
 </style>

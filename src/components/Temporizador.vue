@@ -1,7 +1,7 @@
 <template>
     <section class="is-flex is-align-items-center is-justify-content-space-between">
 
-        <Cronometro :tempoEmSegundos="tempoEmSegundos" />
+        <Cronometro :tempoEmSegundos="tempoEmSegundos"/>
 
         <Botao @clicado="iniciar" icone="fas fa-play" texto="Play" :desabilitado="cronometroRodando" />
 

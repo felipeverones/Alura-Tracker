@@ -3,7 +3,7 @@
     <div class="column is-one-quarter">
       <BarraLateral @aoTemaAlterado="trocarTema"/>
     </div>
-    <div class="column is-three-quarter conteudo">
+    <div class="column is-three-quarter conteudo" id="conteudo">
       <Formulario @aoSalvarTarefa="salvarTarefa"/>
       <div class="lista">
         <Tarefa v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa"/>
@@ -63,6 +63,15 @@ export default defineComponent({
     padding: 1.25rem;
   }
 
+  @media (max-width: 500px){
+    .lista{
+      min-height: 500px;
+    }
+  }
+
+ 
+
+
   main{
     --bg-primario: #fff;
     --texto-primario: #000;
@@ -82,5 +91,6 @@ export default defineComponent({
   .box{
     box-shadow: var(--sombra);
   }
+ 
 
 </style>

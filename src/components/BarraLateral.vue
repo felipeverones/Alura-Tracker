@@ -3,8 +3,8 @@
         <h1>
             <img src="@/assets/logo.png" alt="">
         </h1>
-        <button class="button" @click="alterarTema">
-          {{ textoBotao }}
+        <button class="button" @click="alterarTema" :style="estilos">
+          <i :class="textoBotao "></i>
         </button>
     </header>
 </template>
@@ -19,14 +19,17 @@
         data (){
           return{
             modoEscuroAtivo: false,
+            estilos:{
+              "width": '50px'
+            }
           }
         },
         computed:{
           textoBotao (){
             if(this.modoEscuroAtivo){
-              return 'Desativar modo escuro'
+              return 'fas fa-sun'
             }else{
-              return 'Ativar modo escuro'
+              return 'fas fa-moon'
             }
           }
         },
@@ -49,10 +52,11 @@ header {
   width: 100%;
   height: 100vh;
 }
+
 @media only screen and (max-width: 768px) {
   header {
     padding: 2.5rem;
     height: auto;
-  }
+  } 
 }
 </style>
